@@ -14,71 +14,48 @@ Design principle:
 
 ---
 
-# 2. Reference Stack
+# 2. Implemented Stack (Local)
 
-This is a practical default stack. Replace components only when the existing codebase already provides equivalent capability.
+Authoritative source: `AGENTS.md`. Supporting references: `ARCHITECTURE.MD`, `Agent_Plan.md`, `productfeatures.md`.
 
-| Layer | Reference choice | Responsibility |
+| Layer | Implemented choice | Responsibility / status |
 |---|---|---|
-| Web app | Next.js + TypeScript | UI, routing, server actions/API proxy |
-| UI | Tailwind + existing component system | Search, Explore, History, Editor |
-| API | FastAPI + Python | Search, ingestion, media metadata, AI orchestration |
-| Video processing | FFmpeg | Probe, decode, scene clips, thumbnails, transcode |
-| Vision embeddings | CLIP/SigLIP-class model | Image/video semantic representation |
-| Text embeddings | Same compatible embedding space where possible | Text-to-scene retrieval |
-| Vector DB | Qdrant | Scene vector search + payload filters |
-| Relational DB | PostgreSQL | Users, projects, searches, scenes, clips, history |
-| Object storage | S3-compatible storage | Source videos, thumbnails, generated previews |
-| Cache/queue | Redis only when needed | Job state, caching, background jobs |
-| Background workers | Python worker | Video indexing, embedding, transcription, rough-cut jobs |
+| Web app | Next.js 16 + TypeScript (`localhost:3000`) | Discover, Script, Story, Explore, History |
+| API | FastAPI (`127.0.0.1:8010`) | Search, script-to-B-roll, story/rough-cut, explore, history, health/stats |
+| Text embeddings | `sentence-transformers/all-MiniLM-L6-v2` (384-dim) | Query + annotation embeddings for semantic retrieval |
+| Vector DB | Local Qdrant (`http://localhost:6333`) | Collection `reelmind_minilm384_v1`, cosine search |
+| Relational/state DB | SQLite (`data/reelmind.db`) | Metadata, searches, projects/story clips, jobs, history |
+| Media + caches | Local filesystem (`media/`, `data/`) | Source AVIs, previews, rough cuts, embedding shards, Explore cache |
+| Worker | `python worker/pipeline.py <stage>` | One stage per command: ingest/probe/language/embed/index/previews/explore/universe/report |
 
-Do not add every component on day one. For a local MVP, PostgreSQL + Qdrant + filesystem/object storage can cover core behavior.
+Deferred / legacy (not active runtime path):
+- Image Search / CLIP / VLM is **deferred**.
+- Legacy Qdrant collection `scenes-clip-vitb32-laion2b-v1` is **protected** and not used by text retrieval.
 
 ---
 
 # 3. System Context
 
-```text
-                         â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
-                         â”‚   Next.js Web App   â”‚
-                         â”‚                     â”‚
-                         â”‚ AI Brain            â”‚
-                         â”‚ Image Search        â”‚
-                         â”‚ Explore             â”‚
-                         â”‚ History             â”‚
-                         â”‚ Clip Editor         â”‚
-                         â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
-                                    â”‚ HTTPS
-                                    â–¼
-                         â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
-                         â”‚      FastAPI        â”‚
-                         â”‚     API Layer       â”‚
-                         â””â”€â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”˜
-                                 â”‚     â”‚
-                    â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜     â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
-                    â–¼                                 â–¼
-          â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”                â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
-          â”‚ Search / AI     â”‚                â”‚ Project / CRUD  â”‚
-          â”‚ Orchestrator    â”‚                â”‚ Services        â”‚
-          â””â”€â”€â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”€â”˜                â””â”€â”€â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”€â”˜
-                   â”‚                                  â”‚
-          â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”´â”€â”€â”€â”€â”€â”€â”€â”€â”                 â”Œâ”€â”€â”€â”€â”€â”€â”€â”´â”€â”€â”€â”€â”€â”€â”€â”€â”
-          â–¼                 â–¼                 â–¼                â–¼
-     â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”      â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”   â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”   â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
-     â”‚ Qdrant  â”‚      â”‚ AI Models  â”‚   â”‚ PostgreSQL â”‚   â”‚ Object Storeâ”‚
-     â”‚ Vectors â”‚      â”‚ Vision/Textâ”‚   â”‚ Metadata   â”‚   â”‚ Media       â”‚
-     â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜      â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜   â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜   â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
-                              â–²
-                              â”‚
-                       â”Œâ”€â”€â”€â”€â”€â”€â”´â”€â”€â”€â”€â”€â”€â”€â”
-                       â”‚ Worker Queue â”‚
-                       â”‚ / Workers    â”‚
-                       â””â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”˜
-                              â”‚
-                       â”Œâ”€â”€â”€â”€â”€â”€â”´â”€â”€â”€â”€â”€â”€â”€â”
-                       â”‚ FFmpeg +      â”‚
-                       â”‚ Scene Indexer â”‚
-                       â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+```mermaid
+flowchart TB
+    FE["Next.js 16 frontend<br/>localhost:3000<br/>/, /script, /story, /explore, /history"]
+    API["FastAPI backend<br/>127.0.0.1:8010<br/>routers: search, script, story, explore, history, system"]
+
+    FE -->|HTTP| API
+
+    API --> SVC["services: search / embeddings / vectorstore / language / concepts"]
+    API --> DB["SQLite<br/>data/reelmind.db<br/>metadata + app state"]
+    API --> QD["Qdrant<br/>http://localhost:6333<br/>reelmind_minilm384_v1 (384-dim cosine)"]
+    API --> FS["Filesystem<br/>media/ + data/<br/>previews, roughcuts, caches"]
+
+    W["Python worker<br/>worker/pipeline.py<br/>ingest|probe|language|embed|index|previews|explore|universe|report"] --> FS
+    W --> DB
+    W --> QD
+
+    EMB["Text embeddings only<br/>sentence-transformers/all-MiniLM-L6-v2"] --> QD
+
+    DEFER["Deferred: Image Search / CLIP / VLM<br/>Legacy CLIP collection scenes-clip-vitb32-laion2b-v1 is protected (not used)"]
+    API -. deferred .-> DEFER
 ```
 
 ---
@@ -142,7 +119,7 @@ detection
 
 ## Embedding
 
-Vector data belongs in Qdrant. PostgreSQL can store model/version metadata.
+Vector data belongs in Qdrant. SQLite can store model/version metadata.
 
 ```text
 embedding_meta
@@ -213,49 +190,30 @@ Do not duplicate source media for every Story clip.
 
 # 5. Video Ingestion Pipeline
 
-```text
-Upload video
-    â”‚
-    â–¼
-Probe media with FFmpeg
-    â”‚
-    â–¼
-Scene/shot segmentation
-    â”‚
-    â–¼
-Extract representative frames
-    â”‚
-    â”œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
-    â–¼               â–¼
-Visual embedding   Visual metadata
-    â”‚               â”‚
-    â””â”€â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”˜
-            â–¼
-Optional transcript/audio analysis
-            â”‚
-            â–¼
-Write scene metadata to PostgreSQL
-            â”‚
-            â–¼
-Write vectors + filter payload to Qdrant
-            â”‚
-            â–¼
-Generate thumbnails/previews
-            â”‚
-            â–¼
-Scene searchable
+```mermaid
+flowchart TB
+    ING["ingest<br/>CSV + source AVIs -> SQLite rows"] --> PROBE["probe<br/>ffprobe + media metadata + thumbnails"]
+    PROBE --> LANG["language<br/>annotation language detection<br/>(translation batch deferred)"]
+    LANG --> EMB["embed<br/>text embeddings (MiniLM 384-dim)"]
+    EMB --> INDEX["index<br/>upsert vectors to Qdrant cosine index"]
+    INDEX --> PREV["previews<br/>segment-scoped MP4 preview generation"]
+    PREV --> EXP["explore<br/>2D point cache"]
+    EXP --> UNI["universe --refresh<br/>K-Means + HDBSCAN + classical MDS cache build"]
+    UNI --> REP["report<br/>pipeline/system counters"]
 ```
+
+Runtime rule: the API serves indexed/cached artifacts. It does **not** run model training and does **not** recompute the Explore universe during normal page loads.
 
 ### Segmentation strategy
 
 Start with shot/scene boundaries. Avoid frame-level indexing in MVP because vector count and query cost grow rapidly.
 
-For each scene, retain:
+For each segment, retain:
 
 - Start/end timestamp.
-- One or more representative frames.
-- One visual embedding or pooled representation.
-- Semantic metadata.
+- Segment-level metadata and timestamps in SQLite.
+- Text annotations used to create MiniLM embeddings.
+- Vector payload and IDs in Qdrant.
 
 Add finer temporal windows only when evaluation shows shot-level retrieval is too coarse.
 
@@ -263,64 +221,24 @@ Add finer temporal windows only when evaluation shows shot-level retrieval is to
 
 # 6. Semantic Retrieval Pipeline
 
-## Text search
+```mermaid
+flowchart LR
+    Q["User query / selected segment"] --> E["Text embedding<br/>all-MiniLM-L6-v2 (384-dim)"]
+    E --> V["Qdrant cosine search<br/>reelmind_minilm384_v1"]
+    V --> H["SQLite hydration<br/>segment + annotation metadata"]
+    H --> R["Results with start/end timestamps,<br/>description, preview endpoint, score"]
 
-```text
-User query
-   â”‚
-   â–¼
-Query understanding
-   â”‚
-   â”œâ”€â”€ concepts
-   â”œâ”€â”€ optional filters
-   â””â”€â”€ narrative intent
-   â”‚
-   â–¼
-Text embedding
-   â”‚
-   â–¼
-Vector search in Qdrant
-   â”‚
-   â–¼
-Metadata filters
-   â”‚
-   â–¼
-Candidate scenes
-   â”‚
-   â–¼
-Optional reranking
-   â”‚
-   â–¼
-Top results
+    FS["Find Similar"] --> E
+    EX["Explore highlight"] --> E
+    TXT["Text search"] --> E
 ```
 
-## Image search
-
 ```text
-Reference image
-   â”‚
-   â–¼
-Image embedding / visual understanding
-   â”‚
-   â–¼
-Vector search
-   â”‚
-   â–¼
-Optional metadata filtering
-   â”‚
-   â–¼
-Top scene candidates
+Canonical retrieval path:
+query -> text embedding -> Qdrant cosine neighbors -> SQLite metadata hydration -> ranked timestamped results
 ```
 
-## Find Similar
-
-Use the selected scene embedding as the query vector.
-
-Support:
-
-- Pure visual nearest-neighbor retrieval.
-- Semantic retrieval using scene description embedding.
-- Hybrid search when both vectors exist.
+Image Search / CLIP / VLM is deferred and not part of the active retrieval path.
 
 ---
 
@@ -376,42 +294,27 @@ Treat this structure as an internal contract. UI labels may change without chang
 
 Explore should use the same indexed scene identity as search.
 
-Offline/index-time:
+Offline cache build (`python worker/pipeline.py universe --refresh`):
 
-```text
-Scene embeddings
-      â”‚
-      â–¼
-Dimensionality reduction
-      â”‚
-      â–¼
-2D coordinates
-      â”‚
-      â–¼
-Store projection version
+```mermaid
+flowchart LR
+    A["Indexed MiniLM vectors"] --> B["K-Means galaxy clustering<br/>(k selected by silhouette)"]
+    B --> C["HDBSCAN subclusters<br/>(fallback handling for sparse groups)"]
+    C --> D["Classical MDS layout + seeded projection<br/>(seed 42)"]
+    D --> E["Cache artifact<br/>data/explore/universe_v1.json"]
 ```
 
-Runtime:
+Runtime flow:
 
-```text
-Map viewport
-   â”‚
-   â–¼
-Fetch points for visible region
-   â”‚
-   â–¼
-Render point layer
-   â”‚
-   â–¼
-Hover/click scene ID
-   â”‚
-   â–¼
-Load scene metadata + preview
+```mermaid
+flowchart LR
+    FE["/explore frontend"] --> API["GET /api/explore/universe*"]
+    API --> CACHE["Read cached universe_v1.json"]
+    CACHE --> META["Hydrate scene metadata + preview endpoints"]
+    META --> FE
 ```
 
-Do not calculate UMAP/t-SNE in the browser for the full corpus.
-
-For larger libraries, precompute the map and tile or cluster points.
+The API serves cached universe data and scene metadata; it does not recompute clustering/projection on normal page loads.
 
 ---
 
@@ -428,7 +331,7 @@ scene.opened
 scene.selected
 scene.added_to_story
 scene.find_similar
-image_search.created
+image_search.created (deferred feature event)
 rough_cut.generated
 ```
 
@@ -442,19 +345,19 @@ Saved searches can be represented as named search definitions rather than duplic
 
 The editor stores references to source scenes and user trim/order decisions.
 
-```text
-Scene
-  â”‚
-  â””â”€â”€ StoryClip
-        â”œâ”€â”€ source range
-        â”œâ”€â”€ trim range
-        â”œâ”€â”€ order
-        â””â”€â”€ script beat
+```mermaid
+flowchart TB
+    SEG["Scene/segment reference<br/>(segment_id + source start/end)"] --> SC["StoryClip state<br/>(trim/order/project)"]
+    SC --> JOB["Rough-cut job (worker)"]
+    JOB --> TRIM["FFmpeg segment-scoped trim + re-encode<br/>(per selected range)"]
+    TRIM --> CONCAT["Concatenate generated parts to preview sequence"]
+    CONCAT --> OUT["media/roughcuts/{project_id}/roughcut.mp4<br/>editable preview output"]
+    SRC["Source AVIs (immutable)"] -. never concatenated raw .-> JOB
 ```
 
 ### Preview
 
-For MVP, compose previews from source clip URLs or generated short proxies.
+For MVP, previews are generated from segment-scoped trims; source media remains immutable.
 
 ### Rough Cut
 
@@ -471,7 +374,7 @@ Rough Cut job receives:
 }
 ```
 
-Worker returns a sequence manifest first. Rendering can remain separate.
+Worker generates a sequence/preview output from selected story clip references; source AVIs are not modified.
 
 Example sequence manifest:
 
@@ -500,7 +403,7 @@ GET    /api/scenes/{scene_id}
 GET    /api/scenes/{scene_id}/preview
 
 POST   /api/search/text
-POST   /api/search/image
+POST   /api/search/image   (deferred in AGENTS.md status model)
 POST   /api/search/script
 POST   /api/search/similar
 GET    /api/search/{search_id}
@@ -542,8 +445,8 @@ Jobs:
 Job states:
 
 ```text
-queued â†’ running â†’ succeeded
-                 â””â†’ failed
+queued -> running -> succeeded
+                 -> failed
 ```
 
 Every job needs an ID and error state. Do not hide worker failures behind permanent loading states.
@@ -552,7 +455,7 @@ Every job needs an ID and error state. Do not hide worker failures behind perman
 
 # 14. Storage Rules
 
-## Object storage
+## Filesystem (`media/`)
 
 Store:
 
@@ -562,7 +465,7 @@ Store:
 - Generated preview.
 - Optional rendered rough cut.
 
-## PostgreSQL
+## SQLite (`data/reelmind.db`)
 
 Store:
 
@@ -573,12 +476,11 @@ Store:
 - Editor state.
 - Job state.
 
-## Qdrant
+## Qdrant (`reelmind_minilm384_v1`)
 
 Store:
 
-- Scene vectors.
-- Image/text vector representations where applicable.
+- Text-embedding vectors (MiniLM, 384-dim).
 - Lightweight filter payload.
 - Scene ID and video ID.
 
@@ -594,8 +496,8 @@ Do not put large descriptions or media blobs into vector payloads.
 - Store generated files under controlled keys.
 - Prevent path traversal in source filenames.
 - Restrict project access by authenticated user/project ownership.
-- Do not expose object-store credentials to browser clients.
-- Use signed URLs for private media.
+- Do not expose backend filesystem/media credentials to browser clients.
+- Use controlled media endpoints for private assets when needed.
 - Record model/version used for embeddings.
 - Make ingestion jobs idempotent.
 - Make retries safe.
@@ -655,7 +557,7 @@ Measure:
 - NDCG where useful.
 - Median search latency.
 
-For image search, store reference image plus expected scene IDs.
+For deferred image search, plan to store reference image plus expected scene IDs.
 
 For Script-to-B-roll, evaluate beat-level retrieval separately from final sequence ordering.
 
@@ -668,10 +570,10 @@ Local development:
 ```text
 Next.js
 FastAPI
-PostgreSQL
+SQLite
 Qdrant
 FFmpeg
-Local object storage or filesystem
+Local filesystem (`media/`, `data/`)
 Worker process
 ```
 
