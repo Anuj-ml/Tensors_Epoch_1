@@ -22,8 +22,7 @@ machine, with **no cloud APIs** in the runtime path.
 
 ## 📸 Dashboard
 
-> **➡️ Upload your dashboard screenshot to `assets/dashboard.png`** — it will render
-> automatically right below this line. (The `assets/` folder already exists in the repo.)
+
 
 ![Frames Studio Dashboard](assets/dashboard.png)
 
