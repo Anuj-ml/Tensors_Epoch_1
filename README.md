@@ -1,4 +1,4 @@
-# ReelMind AI B-Roll Studio â€” Architecture
+# fRAMES Studio  Architecture
 
 ## 1. Architecture Goal
 
