@@ -1,0 +1,68 @@
+{
+  "model": "sentence-transformers/all-MiniLM-L6-v2",
+  "dim": 384,
+  "shards": [
+    {
+      "file": "shard_00000.npz",
+      "count": 5000
+    },
+    {
+      "file": "shard_00001.npz",
+      "count": 5000
+    },
+    {
+      "file": "shard_00002.npz",
+      "count": 5000
+    },
+    {
+      "file": "shard_00003.npz",
+      "count": 5000
+    },
+    {
+      "file": "shard_00004.npz",
+      "count": 5000
+    },
+    {
+      "file": "shard_00005.npz",
+      "count": 5000
+    },
+    {
+      "file": "shard_00006.npz",
+      "count": 5000
+    },
+    {
+      "file": "shard_00007.npz",
+      "count": 5000
+    },
+    {
+      "file": "shard_00008.npz",
+      "count": 5000
+    },
+    {
+      "file": "shard_00009.npz",
+      "count": 5000
+    },
+    {
+      "file": "shard_00010.npz",
+      "count": 5000
+    },
+    {
+      "file": "shard_00011.npz",
+      "count": 5000
+    },
+    {
+      "file": "shard_00012.npz",
+      "count": 5000
+    },
+    {
+      "file": "shard_00013.npz",
+      "count": 5000
+    },
+    {
+      "file": "shard_00014.npz",
+      "count": 51
+    }
+  ],
+  "total_vectors": 70051,
+  "updated_at": "2026-10-02T21:46:29Z"
+}

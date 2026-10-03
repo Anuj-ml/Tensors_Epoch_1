@@ -15,8 +15,8 @@ npm-debug.log*
 # Machine caches (pip/HF/npm redirected to D: per AGENTS.md invariant #5)
 .cache/
 
-# Derived data + logs — regenerate with `python worker/pipeline.py <stage>`
-data/
+# Derived data is versioned intentionally (SQLite DB, embedding shards,
+# Explore universe cache, reports, logs) — see the DATA commit.
 artifacts/
 
 # Generated media (thumbnails / previews / frames / uploads / rough cuts)
@@ -38,4 +38,3 @@ YouTubeClips/
 *.swp
 Thumbs.db
 .DS_Store
-*.log

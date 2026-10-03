@@ -1,0 +1,112 @@
+{
+  "segments": 1970,
+  "galaxies": 20,
+  "subclusters": 55,
+  "chosen_k": 20,
+  "silhouette_cosine": 0.218,
+  "labels": {
+    "g00": {
+      "label": "Cutting Slicing Knife",
+      "count": 246,
+      "subclusters": 3
+    },
+    "g01": {
+      "label": "Man Doing Doing Exercise",
+      "count": 98,
+      "subclusters": 5
+    },
+    "g02": {
+      "label": "Plane Flying Airplane",
+      "count": 38,
+      "subclusters": 2
+    },
+    "g03": {
+      "label": "Dog Playing Puppy Playing",
+      "count": 86,
+      "subclusters": 2
+    },
+    "g04": {
+      "label": "Woman Cooking Lady",
+      "count": 130,
+      "subclusters": 5
+    },
+    "g05": {
+      "label": "Man Playing Playing Plays",
+      "count": 124,
+      "subclusters": 3
+    },
+    "g06": {
+      "label": "Man Eating Pizza Food",
+      "count": 29,
+      "subclusters": 2
+    },
+    "g07": {
+      "label": "Cat Playing Kitten Playing",
+      "count": 94,
+      "subclusters": 2
+    },
+    "g08": {
+      "label": "Man Woman Woman Women",
+      "count": 65,
+      "subclusters": 2
+    },
+    "g09": {
+      "label": "Woman Dancing Dance Danced",
+      "count": 72,
+      "subclusters": 3
+    },
+    "g10": {
+      "label": "Riding Horse Riding",
+      "count": 40,
+      "subclusters": 2
+    },
+    "g11": {
+      "label": "Man Cooking Pan",
+      "count": 152,
+      "subclusters": 2
+    },
+    "g12": {
+      "label": "Men Ball Soccer",
+      "count": 94,
+      "subclusters": 4
+    },
+    "g13": {
+      "label": "Man Shooting Shooting Firing",
+      "count": 30,
+      "subclusters": 2
+    },
+    "g14": {
+      "label": "Man Talking Person Talking",
+      "count": 172,
+      "subclusters": 2
+    },
+    "g15": {
+      "label": "Car Man Driving Road",
+      "count": 49,
+      "subclusters": 2
+    },
+    "g16": {
+      "label": "Man Riding Riding Motorcycle",
+      "count": 56,
+      "subclusters": 2
+    },
+    "g17": {
+      "label": "Woman Girl Lady",
+      "count": 114,
+      "subclusters": 5
+    },
+    "g18": {
+      "label": "Animal Eating Baby",
+      "count": 197,
+      "subclusters": 3
+    },
+    "g19": {
+      "label": "Baby Child Little",
+      "count": 84,
+      "subclusters": 2
+    }
+  },
+  "cache": "D:\\Epoch_Final\\data\\explore\\universe_v1.json",
+  "elapsed_s": 14.5,
+  "generated_at": "2026-10-02T22:54:47Z"
+}

@@ -1,0 +1,511 @@
+2026-10-03 02:49:19,174 INFO stage ingest started (job 0a96c6be-206f-4c98-aaa3-15661d2e9281)
+2026-10-03 02:49:19,319 INFO [ingest] 10% read 20000 csv rows
+2026-10-03 02:49:19,412 INFO [ingest] 20% read 40000 csv rows
+2026-10-03 02:49:19,507 INFO [ingest] 29% read 60000 csv rows
+2026-10-03 02:49:19,601 INFO [ingest] 39% read 80000 csv rows
+2026-10-03 02:49:19,698 INFO [ingest] 49% read 100000 csv rows
+2026-10-03 02:49:19,799 INFO [ingest] 59% read 120000 csv rows
+2026-10-03 02:49:40,611 INFO stage ingest started (job c3a5390b-08a6-498d-b392-00f6532d6e69)
+2026-10-03 02:49:40,752 INFO [ingest] 10% read 20000 csv rows
+2026-10-03 02:49:40,847 INFO [ingest] 20% read 40000 csv rows
+2026-10-03 02:49:40,945 INFO [ingest] 29% read 60000 csv rows
+2026-10-03 02:49:41,046 INFO [ingest] 39% read 80000 csv rows
+2026-10-03 02:49:41,143 INFO [ingest] 49% read 100000 csv rows
+2026-10-03 02:49:41,241 INFO [ingest] 59% read 120000 csv rows
+2026-10-03 02:49:44,712 INFO stage ingest finished in 4.1s: {"csv_rows_read": 122665, "total_videos_on_disk": 1970, "total_video_ids": 1587, "total_csv_video_ids": 1587, "total_segments": 2089, "segments_with_file": 1970, "segments_missing_file": 119, "file_only_segments": 0, "total_annotations": 122665, "english_annotations_declared": 85550, "non_english_annotations_declared": 37115, "matched_annotations": 115955, "unmatched_annotations": 6710, "duplicate_full_rows": 28, "duplicate_segment_description_rows": 11280, "invalid_records": 0, "invalid_reasons": {}, "invalid_samples": [], "declared_languages": {"English": 85550, "Hindi": 6245, "Romanian": 39
+2026-10-03 02:49:58,534 INFO stage probe started (job c3c7741b-fba9-4206-94a6-3ca567d29439)
+2026-10-03 02:49:58,545 INFO stage probe finished in 0.0s: {"probed_ok": 0, "failed": 0, "already_probed": 0, "duration_mismatches_gt_1_5s": 0, "failures": [], "elapsed_s": 0.0}
+2026-10-03 02:51:12,565 INFO stage ingest started (job cda6bf9f-6ba1-450f-be74-b7e8253d5870)
+2026-10-03 02:51:12,714 INFO [ingest] 10% read 20000 csv rows
+2026-10-03 02:51:12,811 INFO [ingest] 20% read 40000 csv rows
+2026-10-03 02:51:12,910 INFO [ingest] 29% read 60000 csv rows
+2026-10-03 02:51:13,007 INFO [ingest] 39% read 80000 csv rows
+2026-10-03 02:51:13,109 INFO [ingest] 49% read 100000 csv rows
+2026-10-03 02:51:13,212 INFO [ingest] 59% read 120000 csv rows
+2026-10-03 02:51:17,219 INFO stage ingest finished in 4.6s: {"csv_rows_read": 122665, "total_videos_on_disk": 1970, "total_video_ids": 1587, "total_csv_video_ids": 1587, "total_segments": 2089, "segments_with_file": 1970, "segments_missing_file": 119, "file_only_segments": 0, "total_annotations": 122664, "english_annotations_declared": 85549, "non_english_annotations_declared": 37115, "matched_annotations": 115954, "unmatched_annotations": 6710, "duplicate_full_rows": 28, "duplicate_segment_description_rows": 11280, "invalid_records": 1, "invalid_reasons": {"empty_description": 1}, "invalid_samples": [{"csv_row": 71632, "reason": "empty_description", "
+2026-10-03 02:51:17,365 INFO stage probe started (job 49caa347-ac43-4bf5-b727-e0c8ebe4e737)
+2026-10-03 02:51:20,671 INFO [probe] 1% probed 25/1970
+2026-10-03 02:51:21,446 INFO [probe] 3% probed 50/1970
+2026-10-03 02:51:22,607 INFO [probe] 4% probed 75/1970
+2026-10-03 02:51:23,460 INFO [probe] 5% probed 100/1970
+2026-10-03 02:51:24,554 INFO [probe] 6% probed 125/1970
+2026-10-03 02:51:25,462 INFO [probe] 8% probed 150/1970
+2026-10-03 02:51:26,335 INFO [probe] 9% probed 175/1970
+2026-10-03 02:51:27,236 INFO [probe] 10% probed 200/1970
+2026-10-03 02:51:28,183 INFO [probe] 11% probed 225/1970
+2026-10-03 02:51:29,236 INFO [probe] 13% probed 250/1970
+2026-10-03 02:51:30,186 INFO [probe] 14% probed 275/1970
+2026-10-03 02:51:31,154 INFO [probe] 15% probed 300/1970
+2026-10-03 02:51:32,132 INFO [probe] 16% probed 325/1970
+2026-10-03 02:51:33,177 INFO [probe] 18% probed 350/1970
+2026-10-03 02:51:34,262 INFO [probe] 19% probed 375/1970
+2026-10-03 02:51:35,335 INFO [probe] 20% probed 400/1970
+2026-10-03 02:51:36,221 INFO [probe] 22% probed 425/1970
+2026-10-03 02:51:37,151 INFO [probe] 23% probed 450/1970
+2026-10-03 02:51:38,100 INFO [probe] 24% probed 475/1970
+2026-10-03 02:51:39,259 INFO [probe] 25% probed 500/1970
+2026-10-03 02:51:40,301 INFO [probe] 27% probed 525/1970
+2026-10-03 02:51:41,461 INFO [probe] 28% probed 550/1970
+2026-10-03 02:51:42,378 INFO [probe] 29% probed 575/1970
+2026-10-03 02:51:43,318 INFO [probe] 30% probed 600/1970
+2026-10-03 02:51:44,365 INFO [probe] 32% probed 625/1970
+2026-10-03 02:51:45,473 INFO [probe] 33% probed 650/1970
+2026-10-03 02:51:46,885 INFO [probe] 34% probed 675/1970
+2026-10-03 02:51:47,841 INFO [probe] 36% probed 700/1970
+2026-10-03 02:51:48,848 INFO [probe] 37% probed 725/1970
+2026-10-03 02:51:49,968 INFO [probe] 38% probed 750/1970
+2026-10-03 02:51:51,020 INFO [probe] 39% probed 775/1970
+2026-10-03 02:51:52,147 INFO [probe] 41% probed 800/1970
+2026-10-03 02:51:53,153 INFO [probe] 42% probed 825/1970
+2026-10-03 02:51:54,164 INFO [probe] 43% probed 850/1970
+2026-10-03 02:51:55,241 INFO [probe] 44% probed 875/1970
+2026-10-03 02:51:56,163 INFO [probe] 46% probed 900/1970
+2026-10-03 02:51:57,274 INFO [probe] 47% probed 925/1970
+2026-10-03 02:51:58,539 INFO [probe] 48% probed 950/1970
+2026-10-03 02:51:59,769 INFO [probe] 49% probed 975/1970
+2026-10-03 02:52:00,758 INFO [probe] 51% probed 1000/1970
+2026-10-03 02:52:01,911 INFO [probe] 52% probed 1025/1970
+2026-10-03 02:52:02,788 INFO [probe] 53% probed 1050/1970
+2026-10-03 02:52:03,757 INFO [probe] 55% probed 1075/1970
+2026-10-03 02:52:04,852 INFO [probe] 56% probed 1100/1970
+2026-10-03 02:52:05,861 INFO [probe] 57% probed 1125/1970
+2026-10-03 02:52:06,979 INFO [probe] 58% probed 1150/1970
+2026-10-03 02:52:08,023 INFO [probe] 60% probed 1175/1970
+2026-10-03 02:52:09,127 INFO [probe] 61% probed 1200/1970
+2026-10-03 02:52:10,013 INFO [probe] 62% probed 1225/1970
+2026-10-03 02:52:10,952 INFO [probe] 63% probed 1250/1970
+2026-10-03 02:52:12,004 INFO [probe] 65% probed 1275/1970
+2026-10-03 02:52:13,061 INFO [probe] 66% probed 1300/1970
+2026-10-03 02:52:14,216 INFO [probe] 67% probed 1325/1970
+2026-10-03 02:52:15,333 INFO [probe] 69% probed 1350/1970
+2026-10-03 02:52:16,281 INFO [probe] 70% probed 1375/1970
+2026-10-03 02:52:17,211 INFO [probe] 71% probed 1400/1970
+2026-10-03 02:52:18,310 INFO [probe] 72% probed 1425/1970
+2026-10-03 02:52:19,317 INFO [probe] 74% probed 1450/1970
+2026-10-03 02:52:20,252 INFO [probe] 75% probed 1475/1970
+2026-10-03 02:52:21,185 INFO [probe] 76% probed 1500/1970
+2026-10-03 02:52:22,309 INFO [probe] 77% probed 1525/1970
+2026-10-03 02:52:23,457 INFO [probe] 79% probed 1550/1970
+2026-10-03 02:52:24,481 INFO [probe] 80% probed 1575/1970
+2026-10-03 02:52:25,496 INFO [probe] 81% probed 1600/1970
+2026-10-03 02:52:26,540 INFO [probe] 82% probed 1625/1970
+2026-10-03 02:52:27,608 INFO [probe] 84% probed 1650/1970
+2026-10-03 02:52:28,700 INFO [probe] 85% probed 1675/1970
+2026-10-03 02:52:29,944 INFO [probe] 86% probed 1700/1970
+2026-10-03 02:52:30,904 INFO [probe] 88% probed 1725/1970
+2026-10-03 02:52:32,006 INFO [probe] 89% probed 1750/1970
+2026-10-03 02:52:33,055 INFO [probe] 90% probed 1775/1970
+2026-10-03 02:52:34,018 INFO [probe] 91% probed 1800/1970
+2026-10-03 02:52:35,036 INFO [probe] 93% probed 1825/1970
+2026-10-03 02:52:36,058 INFO [probe] 94% probed 1850/1970
+2026-10-03 02:52:37,064 INFO [probe] 95% probed 1875/1970
+2026-10-03 02:52:38,093 INFO [probe] 96% probed 1900/1970
+2026-10-03 02:52:39,054 INFO [probe] 98% probed 1925/1970
+2026-10-03 02:52:40,197 INFO [probe] 99% probed 1950/1970
+2026-10-03 02:52:41,044 INFO stage probe finished in 83.7s: {"probed_ok": 1970, "failed": 0, "skipped": 0, "duration_mismatches_gt_1_5s": 25, "failures": [], "elapsed_s": 83.7}
+2026-10-03 02:52:53,574 INFO stage language started (job 4115b921-fb03-44e4-b4ea-fb916ce8587a)
+2026-10-03 02:52:58,241 INFO [language] 1% detected language on 2000/122664
+2026-10-03 02:53:02,308 INFO [language] 2% detected language on 4000/122664
+2026-10-03 02:53:06,171 INFO [language] 3% detected language on 6000/122664
+2026-10-03 02:53:10,126 INFO [language] 5% detected language on 8000/122664
+2026-10-03 02:53:13,889 INFO [language] 6% detected language on 10000/122664
+2026-10-03 02:53:17,959 INFO [language] 7% detected language on 12000/122664
+2026-10-03 02:53:22,082 INFO [language] 8% detected language on 14000/122664
+2026-10-03 02:53:26,096 INFO [language] 9% detected language on 16000/122664
+2026-10-03 02:53:30,079 INFO [language] 10% detected language on 18000/122664
+2026-10-03 02:53:34,214 INFO [language] 11% detected language on 20000/122664
+2026-10-03 02:53:38,101 INFO [language] 13% detected language on 22000/122664
+2026-10-03 02:53:41,963 INFO [language] 14% detected language on 24000/122664
+2026-10-03 02:53:45,784 INFO [language] 15% detected language on 26000/122664
+2026-10-03 02:53:49,919 INFO [language] 16% detected language on 28000/122664
+2026-10-03 02:53:53,754 INFO [language] 17% detected language on 30000/122664
+2026-10-03 02:53:57,776 INFO [language] 18% detected language on 32000/122664
+2026-10-03 02:54:01,608 INFO [language] 19% detected language on 34000/122664
+2026-10-03 02:54:05,788 INFO [language] 21% detected language on 36000/122664
+2026-10-03 02:54:09,720 INFO [language] 22% detected language on 38000/122664
+2026-10-03 02:54:13,601 INFO [language] 23% detected language on 40000/122664
+2026-10-03 02:54:17,499 INFO [language] 24% detected language on 42000/122664
+2026-10-03 02:54:21,163 INFO [language] 25% detected language on 44000/122664
+2026-10-03 02:54:25,122 INFO [language] 26% detected language on 46000/122664
+2026-10-03 02:54:29,232 INFO [language] 27% detected language on 48000/122664
+2026-10-03 02:54:33,303 INFO [language] 29% detected language on 50000/122664
+2026-10-03 02:54:37,334 INFO [language] 30% detected language on 52000/122664
+2026-10-03 02:54:41,446 INFO [language] 31% detected language on 54000/122664
+2026-10-03 02:54:45,323 INFO [language] 32% detected language on 56000/122664
+2026-10-03 02:54:49,059 INFO [language] 33% detected language on 58000/122664
+2026-10-03 02:54:53,252 INFO [language] 34% detected language on 60000/122664
+2026-10-03 02:54:57,070 INFO [language] 35% detected language on 62000/122664
+2026-10-03 02:55:00,930 INFO [language] 37% detected language on 64000/122664
+2026-10-03 02:55:04,644 INFO [language] 38% detected language on 66000/122664
+2026-10-03 02:55:08,450 INFO [language] 39% detected language on 68000/122664
+2026-10-03 02:55:12,501 INFO [language] 40% detected language on 70000/122664
+2026-10-03 02:55:16,448 INFO [language] 41% detected language on 72000/122664
+2026-10-03 02:55:20,339 INFO [language] 42% detected language on 74000/122664
+2026-10-03 02:55:24,300 INFO [language] 43% detected language on 76000/122664
+2026-10-03 02:55:28,205 INFO [language] 45% detected language on 78000/122664
+2026-10-03 02:55:32,032 INFO [language] 46% detected language on 80000/122664
+2026-10-03 02:55:36,008 INFO [language] 47% detected language on 82000/122664
+2026-10-03 02:55:39,780 INFO [language] 48% detected language on 84000/122664
+2026-10-03 02:55:43,564 INFO [language] 49% detected language on 86000/122664
+2026-10-03 02:55:47,417 INFO [language] 50% detected language on 88000/122664
+2026-10-03 02:55:51,550 INFO [language] 51% detected language on 90000/122664
+2026-10-03 02:55:55,585 INFO [language] 53% detected language on 92000/122664
+2026-10-03 02:55:59,336 INFO [language] 54% detected language on 94000/122664
+2026-10-03 02:56:03,113 INFO [language] 55% detected language on 96000/122664
+2026-10-03 02:56:07,047 INFO [language] 56% detected language on 98000/122664
+2026-10-03 02:56:11,098 INFO [language] 57% detected language on 100000/122664
+2026-10-03 02:56:15,101 INFO [language] 58% detected language on 102000/122664
+2026-10-03 02:56:18,931 INFO [language] 59% detected language on 104000/122664
+2026-10-03 02:56:22,891 INFO [language] 60% detected language on 106000/122664
+2026-10-03 02:56:26,581 INFO [language] 62% detected language on 108000/122664
+2026-10-03 02:56:30,375 INFO [language] 63% detected language on 110000/122664
+2026-10-03 02:56:34,291 INFO [language] 64% detected language on 112000/122664
+2026-10-03 02:56:38,134 INFO [language] 65% detected language on 114000/122664
+2026-10-03 02:56:42,095 INFO [language] 66% detected language on 116000/122664
+2026-10-03 02:56:46,014 INFO [language] 67% detected language on 118000/122664
+2026-10-03 02:56:49,835 INFO [language] 68% detected language on 120000/122664
+2026-10-03 02:56:53,780 INFO [language] 70% detected language on 122000/122664
+2026-10-03 02:56:55,038 INFO [language] 70% detected language on 122664/122664
+2026-10-03 02:56:55,072 INFO stage language finished in 241.5s: {"detected_total": 122664, "declared_vs_detected_mismatch": 10784, "detected_language_counts": {"en": 75113, "tl": 5742, "hi": 5322, "sl": 4273, "ro": 2855, "ta": 2784, "nl": 2759, "de": 2740, "hr": 2630, "es": 1878, "it": 1828, "mk": 1679, "af": 1679, "fr": 1376, "et": 1063, "gu": 1005, "ru": 960, "id": 804, "mr": 778, "no": 632, "pt": 549, "pl": 545, "ca": 514, "hu": 494, "zh-cn": 423, "ml": 392, "bg": 285, "da": 246, "sw": 156, "so": 144, "cy": 140, "sk": 139, "sv": 126, "ne": 94, "tr": 93, "fi": 56, "lt": 51, "vi": 50, "ar": 48, "ko": 47, "lv": 42, "cs": 34, "uk": 32, "ur": 24, "zh-tw": 24
+2026-10-03 03:00:08,014 INFO stage language started (job 0a46c44c-d377-4586-9260-5ae83a506daa)
+2026-10-03 03:00:14,377 INFO [language] 1% detected language on 2000/122664
+2026-10-03 03:00:20,211 INFO [language] 2% detected language on 4000/122664
+2026-10-03 03:00:25,798 INFO [language] 3% detected language on 6000/122664
+2026-10-03 03:00:31,384 INFO [language] 5% detected language on 8000/122664
+2026-10-03 03:00:37,098 INFO [language] 6% detected language on 10000/122664
+2026-10-03 03:00:42,892 INFO [language] 7% detected language on 12000/122664
+2026-10-03 03:00:48,750 INFO [language] 8% detected language on 14000/122664
+2026-10-03 03:00:54,457 INFO [language] 9% detected language on 16000/122664
+2026-10-03 03:01:00,047 INFO [language] 10% detected language on 18000/122664
+2026-10-03 03:01:05,811 INFO [language] 11% detected language on 20000/122664
+2026-10-03 03:01:11,359 INFO [language] 13% detected language on 22000/122664
+2026-10-03 03:01:16,972 INFO [language] 14% detected language on 24000/122664
+2026-10-03 03:01:22,455 INFO [language] 15% detected language on 26000/122664
+2026-10-03 03:01:28,259 INFO [language] 16% detected language on 28000/122664
+2026-10-03 03:01:33,765 INFO [language] 17% detected language on 30000/122664
+2026-10-03 03:01:39,494 INFO [language] 18% detected language on 32000/122664
+2026-10-03 03:01:44,930 INFO [language] 19% detected language on 34000/122664
+2026-10-03 03:01:50,750 INFO [language] 21% detected language on 36000/122664
+2026-10-03 03:01:56,334 INFO [language] 22% detected language on 38000/122664
+2026-10-03 03:02:01,866 INFO [language] 23% detected language on 40000/122664
+2026-10-03 03:02:07,511 INFO [language] 24% detected language on 42000/122664
+2026-10-03 03:02:12,901 INFO [language] 25% detected language on 44000/122664
+2026-10-03 03:02:18,536 INFO [language] 26% detected language on 46000/122664
+2026-10-03 03:02:24,413 INFO [language] 27% detected language on 48000/122664
+2026-10-03 03:02:30,197 INFO [language] 29% detected language on 50000/122664
+2026-10-03 03:02:35,946 INFO [language] 30% detected language on 52000/122664
+2026-10-03 03:02:41,694 INFO [language] 31% detected language on 54000/122664
+2026-10-03 03:02:47,339 INFO [language] 32% detected language on 56000/122664
+2026-10-03 03:02:52,791 INFO [language] 33% detected language on 58000/122664
+2026-10-03 03:02:58,803 INFO [language] 34% detected language on 60000/122664
+2026-10-03 03:03:04,354 INFO [language] 35% detected language on 62000/122664
+2026-10-03 03:03:09,992 INFO [language] 37% detected language on 64000/122664
+2026-10-03 03:03:15,327 INFO [language] 38% detected language on 66000/122664
+2026-10-03 03:03:20,805 INFO [language] 39% detected language on 68000/122664
+2026-10-03 03:03:26,561 INFO [language] 40% detected language on 70000/122664
+2026-10-03 03:03:32,176 INFO [language] 41% detected language on 72000/122664
+2026-10-03 03:03:37,791 INFO [language] 42% detected language on 74000/122664
+2026-10-03 03:03:43,498 INFO [language] 43% detected language on 76000/122664
+2026-10-03 03:03:49,114 INFO [language] 45% detected language on 78000/122664
+2026-10-03 03:03:54,648 INFO [language] 46% detected language on 80000/122664
+2026-10-03 03:04:00,143 INFO [language] 47% detected language on 82000/122664
+2026-10-03 03:04:05,618 INFO [language] 48% detected language on 84000/122664
+2026-10-03 03:04:11,161 INFO [language] 49% detected language on 86000/122664
+2026-10-03 03:04:16,678 INFO [language] 50% detected language on 88000/122664
+2026-10-03 03:04:22,505 INFO [language] 51% detected language on 90000/122664
+2026-10-03 03:04:28,380 INFO [language] 53% detected language on 92000/122664
+2026-10-03 03:04:33,966 INFO [language] 54% detected language on 94000/122664
+2026-10-03 03:04:39,536 INFO [language] 55% detected language on 96000/122664
+2026-10-03 03:04:45,267 INFO [language] 56% detected language on 98000/122664
+2026-10-03 03:04:50,965 INFO [language] 57% detected language on 100000/122664
+2026-10-03 03:04:56,668 INFO [language] 58% detected language on 102000/122664
+2026-10-03 03:05:02,310 INFO [language] 59% detected language on 104000/122664
+2026-10-03 03:05:08,125 INFO [language] 60% detected language on 106000/122664
+2026-10-03 03:05:13,556 INFO [language] 62% detected language on 108000/122664
+2026-10-03 03:05:19,053 INFO [language] 63% detected language on 110000/122664
+2026-10-03 03:05:24,918 INFO [language] 64% detected language on 112000/122664
+2026-10-03 03:05:30,495 INFO [language] 65% detected language on 114000/122664
+2026-10-03 03:05:36,169 INFO [language] 66% detected language on 116000/122664
+2026-10-03 03:05:41,743 INFO [language] 67% detected language on 118000/122664
+2026-10-03 03:05:47,210 INFO [language] 68% detected language on 120000/122664
+2026-10-03 03:05:53,935 INFO [language] 70% detected language on 122000/122664
+2026-10-03 03:05:55,851 INFO [language] 70% detected language on 122664/122664
+2026-10-03 03:05:55,883 INFO stage language finished in 347.9s: {"detected_total": 122664, "declared_vs_detected_mismatch": 6769, "detection_rules": {"detector_agreement": 101949, "detector_high_confidence": 14577, "declared_fallback": 6138}, "detected_language_counts": {"en": 78994, "hi": 5589, "sl": 4141, "tl": 4113, "ro": 3291, "ta": 2785, "nl": 2720, "de": 2592, "hr": 2355, "es": 1869, "mk": 1699, "it": 1433, "fr": 1308, "gu": 1206, "ru": 1049, "af": 975, "ka": 905, "mr": 567, "pl": 544, "id": 523, "zh": 494, "sr": 439, "pt": 403, "no": 397, "ml": 392, "hu": 374, "ca": 296, "bg": 229, "da": 123, "et": 112, "sw": 103, "sk": 91, "cy": 75, "so": 66, "tr":
+2026-10-03 03:08:07,479 INFO stage language started (job b1106461-e336-49ae-b0f7-ed96f72325f2)
+2026-10-03 03:08:14,654 INFO [language] 1% detected language on 2000/122664
+2026-10-03 03:08:20,715 INFO [language] 2% detected language on 4000/122664
+2026-10-03 03:08:26,713 INFO [language] 3% detected language on 6000/122664
+2026-10-03 03:08:32,744 INFO [language] 5% detected language on 8000/122664
+2026-10-03 03:08:38,690 INFO [language] 6% detected language on 10000/122664
+2026-10-03 03:08:44,826 INFO [language] 7% detected language on 12000/122664
+2026-10-03 03:08:51,059 INFO [language] 8% detected language on 14000/122664
+2026-10-03 03:08:57,193 INFO [language] 9% detected language on 16000/122664
+2026-10-03 03:09:03,083 INFO [language] 10% detected language on 18000/122664
+2026-10-03 03:09:09,241 INFO [language] 11% detected language on 20000/122664
+2026-10-03 03:09:15,181 INFO [language] 13% detected language on 22000/122664
+2026-10-03 03:09:21,167 INFO [language] 14% detected language on 24000/122664
+2026-10-03 03:09:27,078 INFO [language] 15% detected language on 26000/122664
+2026-10-03 03:09:33,278 INFO [language] 16% detected language on 28000/122664
+2026-10-03 03:09:39,172 INFO [language] 17% detected language on 30000/122664
+2026-10-03 03:09:45,271 INFO [language] 18% detected language on 32000/122664
+2026-10-03 03:09:51,103 INFO [language] 19% detected language on 34000/122664
+2026-10-03 03:09:57,357 INFO [language] 21% detected language on 36000/122664
+2026-10-03 03:10:03,301 INFO [language] 22% detected language on 38000/122664
+2026-10-03 03:10:09,212 INFO [language] 23% detected language on 40000/122664
+2026-10-03 03:10:15,156 INFO [language] 24% detected language on 42000/122664
+2026-10-03 03:10:20,876 INFO [language] 25% detected language on 44000/122664
+2026-10-03 03:10:26,863 INFO [language] 26% detected language on 46000/122664
+2026-10-03 03:10:33,150 INFO [language] 27% detected language on 48000/122664
+2026-10-03 03:10:39,350 INFO [language] 29% detected language on 50000/122664
+2026-10-03 03:10:45,427 INFO [language] 30% detected language on 52000/122664
+2026-10-03 03:10:51,561 INFO [language] 31% detected language on 54000/122664
+2026-10-03 03:10:57,480 INFO [language] 32% detected language on 56000/122664
+2026-10-03 03:11:03,257 INFO [language] 33% detected language on 58000/122664
+2026-10-03 03:11:09,620 INFO [language] 34% detected language on 60000/122664
+2026-10-03 03:11:15,600 INFO [language] 35% detected language on 62000/122664
+2026-10-03 03:11:21,496 INFO [language] 37% detected language on 64000/122664
+2026-10-03 03:11:27,219 INFO [language] 38% detected language on 66000/122664
+2026-10-03 03:11:33,133 INFO [language] 39% detected language on 68000/122664
+2026-10-03 03:11:39,384 INFO [language] 40% detected language on 70000/122664
+2026-10-03 03:11:45,345 INFO [language] 41% detected language on 72000/122664
+2026-10-03 03:11:51,344 INFO [language] 42% detected language on 74000/122664
+2026-10-03 03:11:57,435 INFO [language] 43% detected language on 76000/122664
+2026-10-03 03:12:03,385 INFO [language] 45% detected language on 78000/122664
+2026-10-03 03:12:09,229 INFO [language] 46% detected language on 80000/122664
+2026-10-03 03:12:15,096 INFO [language] 47% detected language on 82000/122664
+2026-10-03 03:12:21,031 INFO [language] 48% detected language on 84000/122664
+2026-10-03 03:12:26,969 INFO [language] 49% detected language on 86000/122664
+2026-10-03 03:12:32,693 INFO [language] 50% detected language on 88000/122664
+2026-10-03 03:12:38,789 INFO [language] 51% detected language on 90000/122664
+2026-10-03 03:12:44,947 INFO [language] 53% detected language on 92000/122664
+2026-10-03 03:12:50,811 INFO [language] 54% detected language on 94000/122664
+2026-10-03 03:12:56,643 INFO [language] 55% detected language on 96000/122664
+2026-10-03 03:13:02,563 INFO [language] 56% detected language on 98000/122664
+2026-10-03 03:13:08,535 INFO [language] 57% detected language on 100000/122664
+2026-10-03 03:13:14,523 INFO [language] 58% detected language on 102000/122664
+2026-10-03 03:13:20,421 INFO [language] 59% detected language on 104000/122664
+2026-10-03 03:13:26,443 INFO [language] 60% detected language on 106000/122664
+2026-10-03 03:13:32,115 INFO [language] 62% detected language on 108000/122664
+2026-10-03 03:13:37,885 INFO [language] 63% detected language on 110000/122664
+2026-10-03 03:13:43,999 INFO [language] 64% detected language on 112000/122664
+2026-10-03 03:13:49,848 INFO [language] 65% detected language on 114000/122664
+2026-10-03 03:13:55,819 INFO [language] 66% detected language on 116000/122664
+2026-10-03 03:14:01,736 INFO [language] 67% detected language on 118000/122664
+2026-10-03 03:14:07,658 INFO [language] 68% detected language on 120000/122664
+2026-10-03 03:14:13,646 INFO [language] 70% detected language on 122000/122664
+2026-10-03 03:14:15,659 INFO [language] 70% detected language on 122664/122664
+2026-10-03 03:14:15,689 INFO stage language finished in 368.2s: {"detected_total": 122664, "declared_vs_detected_mismatch": 1594, "detection_rules": {"detector_majority": 118886, "detector_high_confidence": 2466, "declared_fallback": 1312}, "detected_language_counts": {"en": 84063, "hi": 5918, "sl": 3772, "ro": 3713, "ta": 2784, "nl": 2728, "de": 2343, "es": 1844, "hr": 1744, "mk": 1476, "sr": 1305, "fr": 1224, "tl": 1190, "gu": 1171, "ru": 1167, "it": 1042, "ka": 905, "pl": 550, "zh": 472, "ml": 392, "bs": 244, "bg": 240, "mr": 230, "pt": 224, "af": 137, "no": 129, "sn": 114, "id": 88, "et": 80, "jv": 74, "bcl": 72, "sw": 69, "oc": 64, "ca": 64, "sk": 58,
+2026-10-03 03:14:24,189 INFO stage embed started (job 87582aca-1dcc-438f-b65c-c088732288f7)
+2026-10-03 03:14:54,290 INFO [embed] 7% embedded 5000/70051 (787 txt/s)
+2026-10-03 03:15:01,371 INFO [embed] 14% embedded 10000/70051 (744 txt/s)
+2026-10-03 03:15:07,977 INFO [embed] 21% embedded 15000/70051 (749 txt/s)
+2026-10-03 03:15:17,678 INFO [embed] 29% embedded 20000/70051 (673 txt/s)
+2026-10-03 03:15:24,428 INFO [embed] 36% embedded 25000/70051 (685 txt/s)
+2026-10-03 03:15:31,718 INFO [embed] 43% embedded 30000/70051 (685 txt/s)
+2026-10-03 03:15:39,014 INFO [embed] 50% embedded 35000/70051 (685 txt/s)
+2026-10-03 03:15:46,353 INFO [embed] 57% embedded 40000/70051 (685 txt/s)
+2026-10-03 03:15:53,272 INFO [embed] 64% embedded 45000/70051 (689 txt/s)
+2026-10-03 03:16:00,485 INFO [embed] 71% embedded 50000/70051 (689 txt/s)
+2026-10-03 03:16:07,587 INFO [embed] 79% embedded 55000/70051 (691 txt/s)
+2026-10-03 03:16:14,458 INFO [embed] 86% embedded 60000/70051 (693 txt/s)
+2026-10-03 03:16:21,645 INFO [embed] 93% embedded 65000/70051 (694 txt/s)
+2026-10-03 03:16:28,895 INFO [embed] 100% embedded 70000/70051 (693 txt/s)
+2026-10-03 03:16:29,012 INFO [embed] 100% embedded 70051/70051 (693 txt/s)
+2026-10-03 03:16:29,022 INFO stage embed finished in 124.8s: {"pending": 70051, "embedded": 70051, "model": "sentence-transformers/all-MiniLM-L6-v2", "dim": 384, "manifest": "D:\\Epoch_Final\\data\\embeddings\\sentence-transformers_all-MiniLM-L6-v2\\manifest.json", "total_vectors_in_manifest": 70051, "elapsed_s": 124.8}
+2026-10-03 03:16:44,842 INFO stage index started (job e1e9d680-54c1-401d-b739-9b7923c819c8)
+2026-10-03 03:17:09,043 INFO stage index finished in 24.2s: {"would_index": 70051, "dim": 384, "collection": "reelmind_minilm384_v1", "dry_run": true, "elapsed_s": 24.2}
+2026-10-03 03:17:26,022 INFO stage index started (job 878fdb4c-58a1-4303-ac14-b185f5c2221c)
+2026-10-03 03:18:00,371 INFO [index] 1% indexed 512 points (1/15 shards)
+2026-10-03 03:18:02,660 INFO [index] 1% indexed 1024 points (1/15 shards)
+2026-10-03 03:18:04,927 INFO [index] 2% indexed 1536 points (1/15 shards)
+2026-10-03 03:18:07,195 INFO [index] 3% indexed 2048 points (1/15 shards)
+2026-10-03 03:18:09,484 INFO [index] 3% indexed 2560 points (1/15 shards)
+2026-10-03 03:18:11,744 INFO [index] 4% indexed 3072 points (1/15 shards)
+2026-10-03 03:18:14,040 INFO [index] 5% indexed 3584 points (1/15 shards)
+2026-10-03 03:18:16,328 INFO [index] 5% indexed 4096 points (1/15 shards)
+2026-10-03 03:18:18,607 INFO [index] 6% indexed 4608 points (1/15 shards)
+2026-10-03 03:18:20,838 INFO [index] 7% indexed 5000 points (1/15 shards)
+2026-10-03 03:18:23,164 INFO [index] 7% indexed 5512 points (2/15 shards)
+2026-10-03 03:18:25,426 INFO [index] 8% indexed 6024 points (2/15 shards)
+2026-10-03 03:18:27,641 INFO [index] 9% indexed 6536 points (2/15 shards)
+2026-10-03 03:18:29,927 INFO [index] 9% indexed 7048 points (2/15 shards)
+2026-10-03 03:18:32,207 INFO [index] 10% indexed 7560 points (2/15 shards)
+2026-10-03 03:18:34,527 INFO [index] 11% indexed 8072 points (2/15 shards)
+2026-10-03 03:18:36,807 INFO [index] 11% indexed 8584 points (2/15 shards)
+2026-10-03 03:18:39,078 INFO [index] 12% indexed 9096 points (2/15 shards)
+2026-10-03 03:18:41,363 INFO [index] 13% indexed 9608 points (2/15 shards)
+2026-10-03 03:18:43,553 INFO [index] 13% indexed 10000 points (2/15 shards)
+2026-10-03 03:18:45,857 INFO [index] 14% indexed 10512 points (3/15 shards)
+2026-10-03 03:18:48,154 INFO [index] 15% indexed 11024 points (3/15 shards)
+2026-10-03 03:18:50,414 INFO [index] 15% indexed 11536 points (3/15 shards)
+2026-10-03 03:18:52,687 INFO [index] 16% indexed 12048 points (3/15 shards)
+2026-10-03 03:18:54,948 INFO [index] 17% indexed 12560 points (3/15 shards)
+2026-10-03 03:18:57,239 INFO [index] 17% indexed 13072 points (3/15 shards)
+2026-10-03 03:18:59,524 INFO [index] 18% indexed 13584 points (3/15 shards)
+2026-10-03 03:19:01,777 INFO [index] 19% indexed 14096 points (3/15 shards)
+2026-10-03 03:19:04,017 INFO [index] 19% indexed 14608 points (3/15 shards)
+2026-10-03 03:19:06,257 INFO [index] 20% indexed 15000 points (3/15 shards)
+2026-10-03 03:19:08,557 INFO [index] 21% indexed 15512 points (4/15 shards)
+2026-10-03 03:19:10,815 INFO [index] 21% indexed 16024 points (4/15 shards)
+2026-10-03 03:19:13,073 INFO [index] 22% indexed 16536 points (4/15 shards)
+2026-10-03 03:19:15,337 INFO [index] 23% indexed 17048 points (4/15 shards)
+2026-10-03 03:19:17,572 INFO [index] 23% indexed 17560 points (4/15 shards)
+2026-10-03 03:19:19,853 INFO [index] 24% indexed 18072 points (4/15 shards)
+2026-10-03 03:19:22,149 INFO [index] 25% indexed 18584 points (4/15 shards)
+2026-10-03 03:19:24,398 INFO [index] 25% indexed 19096 points (4/15 shards)
+2026-10-03 03:19:26,678 INFO [index] 26% indexed 19608 points (4/15 shards)
+2026-10-03 03:19:28,892 INFO [index] 27% indexed 20000 points (4/15 shards)
+2026-10-03 03:19:31,117 INFO [index] 27% indexed 20512 points (5/15 shards)
+2026-10-03 03:19:33,367 INFO [index] 28% indexed 21024 points (5/15 shards)
+2026-10-03 03:19:35,628 INFO [index] 29% indexed 21536 points (5/15 shards)
+2026-10-03 03:19:37,877 INFO [index] 29% indexed 22048 points (5/15 shards)
+2026-10-03 03:19:40,118 INFO [index] 30% indexed 22560 points (5/15 shards)
+2026-10-03 03:19:42,399 INFO [index] 31% indexed 23072 points (5/15 shards)
+2026-10-03 03:19:44,686 INFO [index] 31% indexed 23584 points (5/15 shards)
+2026-10-03 03:19:46,907 INFO [index] 32% indexed 24096 points (5/15 shards)
+2026-10-03 03:19:49,217 INFO [index] 33% indexed 24608 points (5/15 shards)
+2026-10-03 03:19:51,453 INFO [index] 33% indexed 25000 points (5/15 shards)
+2026-10-03 03:19:53,773 INFO [index] 34% indexed 25512 points (6/15 shards)
+2026-10-03 03:19:56,080 INFO [index] 35% indexed 26024 points (6/15 shards)
+2026-10-03 03:19:58,332 INFO [index] 35% indexed 26536 points (6/15 shards)
+2026-10-03 03:20:00,619 INFO [index] 36% indexed 27048 points (6/15 shards)
+2026-10-03 03:20:02,890 INFO [index] 37% indexed 27560 points (6/15 shards)
+2026-10-03 03:20:05,153 INFO [index] 37% indexed 28072 points (6/15 shards)
+2026-10-03 03:20:07,407 INFO [index] 38% indexed 28584 points (6/15 shards)
+2026-10-03 03:20:09,711 INFO [index] 39% indexed 29096 points (6/15 shards)
+2026-10-03 03:20:11,991 INFO [index] 39% indexed 29608 points (6/15 shards)
+2026-10-03 03:20:14,171 INFO [index] 40% indexed 30000 points (6/15 shards)
+2026-10-03 03:20:16,473 INFO [index] 41% indexed 30512 points (7/15 shards)
+2026-10-03 03:20:18,729 INFO [index] 41% indexed 31024 points (7/15 shards)
+2026-10-03 03:20:20,948 INFO [index] 42% indexed 31536 points (7/15 shards)
+2026-10-03 03:20:23,206 INFO [index] 43% indexed 32048 points (7/15 shards)
+2026-10-03 03:20:25,474 INFO [index] 43% indexed 32560 points (7/15 shards)
+2026-10-03 03:20:27,728 INFO [index] 44% indexed 33072 points (7/15 shards)
+2026-10-03 03:20:29,961 INFO [index] 45% indexed 33584 points (7/15 shards)
+2026-10-03 03:20:32,209 INFO [index] 45% indexed 34096 points (7/15 shards)
+2026-10-03 03:20:34,477 INFO [index] 46% indexed 34608 points (7/15 shards)
+2026-10-03 03:20:36,667 INFO [index] 47% indexed 35000 points (7/15 shards)
+2026-10-03 03:20:38,961 INFO [index] 47% indexed 35512 points (8/15 shards)
+2026-10-03 03:20:41,219 INFO [index] 48% indexed 36024 points (8/15 shards)
+2026-10-03 03:20:43,463 INFO [index] 49% indexed 36536 points (8/15 shards)
+2026-10-03 03:20:45,713 INFO [index] 49% indexed 37048 points (8/15 shards)
+2026-10-03 03:20:47,982 INFO [index] 50% indexed 37560 points (8/15 shards)
+2026-10-03 03:20:50,253 INFO [index] 51% indexed 38072 points (8/15 shards)
+2026-10-03 03:20:52,530 INFO [index] 51% indexed 38584 points (8/15 shards)
+2026-10-03 03:20:54,809 INFO [index] 52% indexed 39096 points (8/15 shards)
+2026-10-03 03:20:57,080 INFO [index] 53% indexed 39608 points (8/15 shards)
+2026-10-03 03:20:59,294 INFO [index] 53% indexed 40000 points (8/15 shards)
+2026-10-03 03:21:01,903 INFO [index] 54% indexed 40512 points (9/15 shards)
+2026-10-03 03:21:04,576 INFO [index] 55% indexed 41024 points (9/15 shards)
+2026-10-03 03:21:07,153 INFO [index] 55% indexed 41536 points (9/15 shards)
+2026-10-03 03:21:09,421 INFO [index] 56% indexed 42048 points (9/15 shards)
+2026-10-03 03:21:11,626 INFO [index] 57% indexed 42560 points (9/15 shards)
+2026-10-03 03:21:13,878 INFO [index] 57% indexed 43072 points (9/15 shards)
+2026-10-03 03:21:16,141 INFO [index] 58% indexed 43584 points (9/15 shards)
+2026-10-03 03:21:18,408 INFO [index] 59% indexed 44096 points (9/15 shards)
+2026-10-03 03:21:20,651 INFO [index] 59% indexed 44608 points (9/15 shards)
+2026-10-03 03:21:22,868 INFO [index] 60% indexed 45000 points (9/15 shards)
+2026-10-03 03:21:25,212 INFO [index] 61% indexed 45512 points (10/15 shards)
+2026-10-03 03:21:27,457 INFO [index] 61% indexed 46024 points (10/15 shards)
+2026-10-03 03:21:29,735 INFO [index] 62% indexed 46536 points (10/15 shards)
+2026-10-03 03:21:31,976 INFO [index] 63% indexed 47048 points (10/15 shards)
+2026-10-03 03:21:34,213 INFO [index] 63% indexed 47560 points (10/15 shards)
+2026-10-03 03:21:36,435 INFO [index] 64% indexed 48072 points (10/15 shards)
+2026-10-03 03:21:38,684 INFO [index] 65% indexed 48584 points (10/15 shards)
+2026-10-03 03:21:40,954 INFO [index] 65% indexed 49096 points (10/15 shards)
+2026-10-03 03:21:43,203 INFO [index] 66% indexed 49608 points (10/15 shards)
+2026-10-03 03:21:45,409 INFO [index] 67% indexed 50000 points (10/15 shards)
+2026-10-03 03:21:47,680 INFO [index] 67% indexed 50512 points (11/15 shards)
+2026-10-03 03:21:49,972 INFO [index] 68% indexed 51024 points (11/15 shards)
+2026-10-03 03:21:52,239 INFO [index] 69% indexed 51536 points (11/15 shards)
+2026-10-03 03:21:54,523 INFO [index] 69% indexed 52048 points (11/15 shards)
+2026-10-03 03:21:56,759 INFO [index] 70% indexed 52560 points (11/15 shards)
+2026-10-03 03:21:59,024 INFO [index] 71% indexed 53072 points (11/15 shards)
+2026-10-03 03:22:01,272 INFO [index] 71% indexed 53584 points (11/15 shards)
+2026-10-03 03:22:03,522 INFO [index] 72% indexed 54096 points (11/15 shards)
+2026-10-03 03:22:05,781 INFO [index] 73% indexed 54608 points (11/15 shards)
+2026-10-03 03:22:08,015 INFO [index] 73% indexed 55000 points (11/15 shards)
+2026-10-03 03:22:10,371 INFO [index] 74% indexed 55512 points (12/15 shards)
+2026-10-03 03:22:12,620 INFO [index] 75% indexed 56024 points (12/15 shards)
+2026-10-03 03:22:14,848 INFO [index] 75% indexed 56536 points (12/15 shards)
+2026-10-03 03:22:17,102 INFO [index] 76% indexed 57048 points (12/15 shards)
+2026-10-03 03:22:19,375 INFO [index] 77% indexed 57560 points (12/15 shards)
+2026-10-03 03:22:21,598 INFO [index] 77% indexed 58072 points (12/15 shards)
+2026-10-03 03:22:23,879 INFO [index] 78% indexed 58584 points (12/15 shards)
+2026-10-03 03:22:26,114 INFO [index] 79% indexed 59096 points (12/15 shards)
+2026-10-03 03:22:28,340 INFO [index] 79% indexed 59608 points (12/15 shards)
+2026-10-03 03:22:30,512 INFO [index] 80% indexed 60000 points (12/15 shards)
+2026-10-03 03:22:32,806 INFO [index] 81% indexed 60512 points (13/15 shards)
+2026-10-03 03:22:35,057 INFO [index] 81% indexed 61024 points (13/15 shards)
+2026-10-03 03:22:37,316 INFO [index] 82% indexed 61536 points (13/15 shards)
+2026-10-03 03:22:39,595 INFO [index] 83% indexed 62048 points (13/15 shards)
+2026-10-03 03:22:41,973 INFO [index] 83% indexed 62560 points (13/15 shards)
+2026-10-03 03:22:44,233 INFO [index] 84% indexed 63072 points (13/15 shards)
+2026-10-03 03:22:46,503 INFO [index] 85% indexed 63584 points (13/15 shards)
+2026-10-03 03:22:48,777 INFO [index] 85% indexed 64096 points (13/15 shards)
+2026-10-03 03:22:51,062 INFO [index] 86% indexed 64608 points (13/15 shards)
+2026-10-03 03:22:53,265 INFO [index] 87% indexed 65000 points (13/15 shards)
+2026-10-03 03:22:55,579 INFO [index] 87% indexed 65512 points (14/15 shards)
+2026-10-03 03:22:57,847 INFO [index] 88% indexed 66024 points (14/15 shards)
+2026-10-03 03:23:00,148 INFO [index] 89% indexed 66536 points (14/15 shards)
+2026-10-03 03:23:02,402 INFO [index] 89% indexed 67048 points (14/15 shards)
+2026-10-03 03:23:04,661 INFO [index] 90% indexed 67560 points (14/15 shards)
+2026-10-03 03:23:06,923 INFO [index] 91% indexed 68072 points (14/15 shards)
+2026-10-03 03:23:09,163 INFO [index] 91% indexed 68584 points (14/15 shards)
+2026-10-03 03:23:11,412 INFO [index] 92% indexed 69096 points (14/15 shards)
+2026-10-03 03:23:13,702 INFO [index] 93% indexed 69608 points (14/15 shards)
+2026-10-03 03:23:15,906 INFO [index] 93% indexed 70000 points (14/15 shards)
+2026-10-03 03:23:17,994 INFO [index] 160% indexed 70051 points (15/15 shards)
+2026-10-03 03:23:22,090 INFO stage index finished in 356.1s: {"collection": "reelmind_minilm384_v1", "dim": 384, "points_before": 0, "points_after": 70051, "upserted": 70051, "model": "sentence-transformers/all-MiniLM-L6-v2", "collection_info": {"name": "reelmind_minilm384_v1", "dim": 384, "distance": "Cosine", "points": 70051, "status": "green"}, "legacy_collections_untouched": ["scenes-clip-vitb32-laion2b-v1"], "elapsed_s": 356.1}
+2026-10-03 04:23:51,958 INFO stage universe started (job 0db66678-12be-48d0-8ccc-2e4182241bdc)
+2026-10-03 04:23:51,966 INFO [universe] 0% loading embedding shards
+2026-10-03 04:23:52,103 INFO [universe] 3% loaded 5000/70051 vectors
+2026-10-03 04:23:52,145 INFO [universe] 6% loaded 10000/70051 vectors
+2026-10-03 04:23:52,195 INFO [universe] 9% loaded 15000/70051 vectors
+2026-10-03 04:23:52,246 INFO [universe] 11% loaded 20000/70051 vectors
+2026-10-03 04:23:52,295 INFO [universe] 14% loaded 25000/70051 vectors
+2026-10-03 04:23:52,344 INFO [universe] 17% loaded 30000/70051 vectors
+2026-10-03 04:23:52,389 INFO [universe] 20% loaded 35000/70051 vectors
+2026-10-03 04:23:52,444 INFO [universe] 23% loaded 40000/70051 vectors
+2026-10-03 04:23:52,495 INFO [universe] 26% loaded 45000/70051 vectors
+2026-10-03 04:23:52,549 INFO [universe] 29% loaded 50000/70051 vectors
+2026-10-03 04:23:52,601 INFO [universe] 31% loaded 55000/70051 vectors
+2026-10-03 04:23:52,653 INFO [universe] 34% loaded 60000/70051 vectors
+2026-10-03 04:23:52,702 INFO [universe] 37% loaded 65000/70051 vectors
+2026-10-03 04:23:52,756 INFO [universe] 40% loaded 70000/70051 vectors
+2026-10-03 04:23:52,762 INFO [universe] 40% loaded 70051/70051 vectors
+2026-10-03 04:23:52,867 INFO [universe] 45% building TF-IDF for cluster labels
+2026-10-03 04:23:54,568 INFO [universe] 55% choosing galaxy count by silhouette
+2026-10-03 04:24:00,809 INFO [universe] 68% discovering subclusters (HDBSCAN)
+2026-10-03 04:24:00,976 INFO [universe] 78% naming clusters from TF-IDF terms
+2026-10-03 04:24:00,999 INFO [universe] 84% laying out galaxies (classical MDS)
+2026-10-03 04:24:01,068 INFO [universe] 90% placing subclusters
+2026-10-03 04:24:01,086 INFO [universe] 94% projecting segment points
+2026-10-03 04:24:01,166 INFO [universe] 100% 16 galaxies, 45 subclusters cached
+2026-10-03 04:24:01,174 INFO stage universe finished in 9.2s: {"segments": 1970, "galaxies": 16, "subclusters": 45, "chosen_k": 16, "silhouette_cosine": 0.2027, "labels": {"g00": {"label": "Woman Cooking Lady", "count": 131, "subclusters": 5}, "g01": {"label": "Man Playing Playing Plays", "count": 123, "subclusters": 3}, "g02": {"label": "Gun Man Shooting Man", "count": 64, "subclusters": 2}, "g03": {"label": "Cat Playing Kitten Playing", "count": 94, "subclusters": 2}, "g04": {"label": "Dog Playing Puppy Playing", "count": 87, "subclusters": 2}, "g05": {"label": "Man Cutting Slicing Knife", "count": 255, "subclusters": 3}, "g06": {"label": "Man Cooking 
+2026-10-03 04:24:32,861 INFO stage universe started (job 228ae034-809c-4314-94e0-dcd1b99f2fd5)
+2026-10-03 04:24:32,865 INFO [universe] 0% loading embedding shards
+2026-10-03 04:24:32,987 INFO [universe] 3% loaded 5000/70051 vectors
+2026-10-03 04:24:33,034 INFO [universe] 6% loaded 10000/70051 vectors
+2026-10-03 04:24:33,076 INFO [universe] 9% loaded 15000/70051 vectors
+2026-10-03 04:24:33,124 INFO [universe] 11% loaded 20000/70051 vectors
+2026-10-03 04:24:33,166 INFO [universe] 14% loaded 25000/70051 vectors
+2026-10-03 04:24:33,214 INFO [universe] 17% loaded 30000/70051 vectors
+2026-10-03 04:24:33,258 INFO [universe] 20% loaded 35000/70051 vectors
+2026-10-03 04:24:33,305 INFO [universe] 23% loaded 40000/70051 vectors
+2026-10-03 04:24:33,355 INFO [universe] 26% loaded 45000/70051 vectors
+2026-10-03 04:24:33,408 INFO [universe] 29% loaded 50000/70051 vectors
+2026-10-03 04:24:33,456 INFO [universe] 31% loaded 55000/70051 vectors
+2026-10-03 04:24:33,501 INFO [universe] 34% loaded 60000/70051 vectors
+2026-10-03 04:24:33,547 INFO [universe] 37% loaded 65000/70051 vectors
+2026-10-03 04:24:33,592 INFO [universe] 40% loaded 70000/70051 vectors
+2026-10-03 04:24:33,596 INFO [universe] 40% loaded 70051/70051 vectors
+2026-10-03 04:24:33,698 INFO [universe] 45% building TF-IDF for cluster labels
+2026-10-03 04:24:35,166 INFO [universe] 55% choosing galaxy count by silhouette
+2026-10-03 04:24:46,856 INFO [universe] 68% discovering subclusters (HDBSCAN)
+2026-10-03 04:24:47,070 INFO [universe] 78% naming clusters from TF-IDF terms
+2026-10-03 04:24:47,103 INFO [universe] 84% laying out galaxies (classical MDS)
+2026-10-03 04:24:47,224 INFO [universe] 90% placing subclusters
+2026-10-03 04:24:47,258 INFO [universe] 94% projecting segment points
+2026-10-03 04:24:47,340 INFO [universe] 100% 20 galaxies, 55 subclusters cached
+2026-10-03 04:24:47,345 INFO stage universe finished in 14.5s: {"segments": 1970, "galaxies": 20, "subclusters": 55, "chosen_k": 20, "silhouette_cosine": 0.218, "labels": {"g00": {"label": "Cutting Slicing Knife", "count": 246, "subclusters": 3}, "g01": {"label": "Man Doing Doing Exercise", "count": 98, "subclusters": 5}, "g02": {"label": "Plane Flying Airplane", "count": 38, "subclusters": 2}, "g03": {"label": "Dog Playing Puppy Playing", "count": 86, "subclusters": 2}, "g04": {"label": "Woman Cooking Lady", "count": 130, "subclusters": 5}, "g05": {"label": "Man Playing Playing Plays", "count": 124, "subclusters": 3}, "g06": {"label": "Man Eating Pizza F

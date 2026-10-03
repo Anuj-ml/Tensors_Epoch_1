@@ -1,0 +1,18 @@
+{
+  "collection": "reelmind_minilm384_v1",
+  "dim": 384,
+  "points_before": 0,
+  "points_after": 70051,
+  "upserted": 70051,
+  "model": "sentence-transformers/all-MiniLM-L6-v2",
+  "collection_info": {
+    "name": "reelmind_minilm384_v1",
+    "dim": 384,
+    "distance": "Cosine",
+    "points": 70051,
+    "status": "green"
+  },
+  "legacy_collections_untouched": [
+    "scenes-clip-vitb32-laion2b-v1"
+  ]
+}

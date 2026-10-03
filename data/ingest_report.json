@@ -1,0 +1,73 @@
+{
+  "csv_rows_read": 122665,
+  "total_videos_on_disk": 1970,
+  "total_video_ids": 1587,
+  "total_csv_video_ids": 1587,
+  "total_segments": 2089,
+  "segments_with_file": 1970,
+  "segments_missing_file": 119,
+  "file_only_segments": 0,
+  "total_annotations": 122664,
+  "english_annotations_declared": 85549,
+  "non_english_annotations_declared": 37115,
+  "matched_annotations": 115954,
+  "unmatched_annotations": 6710,
+  "duplicate_full_rows": 28,
+  "duplicate_segment_description_rows": 11280,
+  "invalid_records": 1,
+  "invalid_reasons": {
+    "empty_description": 1
+  },
+  "invalid_samples": [
+    {
+      "csv_row": 71632,
+      "reason": "empty_description",
+      "VideoID": "SKhmFSV-XB0",
+      "raw": "N/A"
+    }
+  ],
+  "declared_languages": {
+    "English": 85549,
+    "Hindi": 6245,
+    "Romanian": 3998,
+    "Slovene": 3584,
+    "Serbian": 3420,
+    "Tamil": 2789,
+    "Dutch": 2735,
+    "German": 2326,
+    "Macedonian": 1915,
+    "Spanish": 1883,
+    "Gujarati": 1437,
+    "Russian": 1243,
+    "French": 1226,
+    "Italian": 953,
+    "Georgian": 907,
+    "Polish": 544,
+    "Chinese": 494,
+    "Malayalam": 394,
+    "Tagalog": 317,
+    "Portuguese": 213,
+    "Filipino": 120,
+    "Norwegian": 120,
+    "Estonian": 64,
+    "Turkish": 54,
+    "Arabic": 49,
+    "Urdu": 28,
+    "Hungarian": 23,
+    "Indonesian": 12,
+    "Malay": 7,
+    "Bulgarian": 5,
+    "Danish": 3,
+    "Bosnian": 3,
+    "Marathi": 2,
+    "Albanian": 1,
+    "Swedish": 1
+  },
+  "sources": {
+    "unverified": 88809,
+    "clean": 33855
+  },
+  "video_ids_without_files": 96,
+  "filename_parse_failures": 0,
+  "unique_segments_indexed_ready": 0
+}
