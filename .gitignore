@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# Node / Next.js
+node_modules/
+frontend/.next/
+frontend/out/
+npm-debug.log*
+*.tsbuildinfo
+
+# Machine caches (pip/HF/npm redirected to D: per AGENTS.md invariant #5)
+.cache/
+
+# Derived data + logs — regenerate with `python worker/pipeline.py <stage>`
+data/
+artifacts/
+
+# Generated media (thumbnails / previews / frames / uploads / rough cuts)
+media/
+
+# Dataset + source videos (read-only inputs, never committed)
+YouTubeClips/
+*.csv
+*.avi
+
+# Env / secrets
+.env
+.env.*
+!.env.local
+
+# Editors / OS
+.vscode/
+.idea/
+*.swp
+Thumbs.db
+.DS_Store
+*.log
