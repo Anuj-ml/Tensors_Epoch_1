@@ -24,7 +24,8 @@ machine, with **no cloud APIs** in the runtime path.
 
 
 
-![Frames Studio Dashboard](assets/dashboard.png)
+![Frames Studio Dashboard](assets/dashboard2.png)
+![Frames Studio Dashboard](assets/dashboard1.png)
 
 ---
 
