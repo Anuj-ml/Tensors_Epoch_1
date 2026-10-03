@@ -12,8 +12,11 @@ frontend/out/
 npm-debug.log*
 *.tsbuildinfo
 
-# Machine caches (pip/HF/npm redirected to D: per AGENTS.md invariant #5)
-.cache/
+# Model/package caches are versioned intentionally (CLIP + MiniLM HF cache,
+# npm + pip caches). Exceptions below exceed GitHub's 100MB per-file hard
+# limit (cannot be pushed even with free-tier Git LFS):
+.cache/huggingface/hub/models--Salesforce--blip-image-captioning-base/
+.cache/pip/http-v2/
 
 # Derived data is versioned intentionally (SQLite DB, embedding shards,
 # Explore universe cache, reports, logs) — see the DATA commit.
